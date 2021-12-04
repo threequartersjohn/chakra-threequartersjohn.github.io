@@ -1,8 +1,9 @@
-import  { HStack } from '@chakra-ui/layout';
+import  { Flex } from '@chakra-ui/layout';
 
 export const Layout = ({ children }) => {
     return (
-        <HStack
+        <Flex
+            flexDirection={ { base: 'column', md: 'row' } }
             backgroundColor={ 'gray.900' }
             as={ 'main' }
             height={ '100vh' }
@@ -10,6 +11,6 @@ export const Layout = ({ children }) => {
             justifyContent={ 'center' }
             alignItems={ 'center' }>
             { children }
-        </HStack>
+        </Flex>
     )
 }

@@ -11,7 +11,8 @@ export const Photo = () => {
         <AspectRatio
             as={ 'section' }
             ratio={ '1' }
-            width={ '20rem' }>
+            marginTop={{ base: '1rem', md: 0 }}
+            width={{ base: '18rem', md: '20rem' }}>
             <Image
                 borderWidth={ '0.1rem' }
                 borderColor={ 'gray.300' }

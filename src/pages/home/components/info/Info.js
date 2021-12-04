@@ -20,12 +20,12 @@ const data = {
             url: 'https://github.com/threequartersjohn',
         },
         {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/jo%C3%A3o-silva-939614179/',
+            name: 'Photos',
+            url: 'https://www.instagram.com/joao_silva.90/',
         },
         {
-            name: 'Instagram',
-            url: 'https://www.instagram.com/joao_silva.90/',
+            name: 'CV',
+            url: 'https://glass-train-5c6.notion.site/Jo-o-Silva-927e110fb20c4ee3ace07ec1bb11da78',
         },
         {
             name: 'Contact',
@@ -40,20 +40,22 @@ export const Info = () => {
             color={ 'gray.300' }
             flexDirection={ 'column' }
             alignItems={ 'flex-start' }
-            paddingX={ '2rem' }
+            paddingX={{ base: 0, md: '2rem' }}
+            paddingTop={{ base: '2rem', md: 0 }}
+            paddingBottom={{ base: '1rem', md: 0 }}
             as={ 'section' }
             height={ '20rem' }
-            width={ '24rem' }>
+            width={{ base: '16rem', md: '24rem' }}>
                 <Box
                     as={ 'header' }>
                     <Heading 
                         as={ 'h1' }
                         lineHeight={ '1' }
-                        fontSize={ '2rem' }>
+                        fontSize={{ base:'1.49rem', md: '2rem' }}>
                         { data.titles.heading }
                         <Text 
                             as={ 'span' }
-                            fontSize={ '1.6rem' }>
+                            fontSize={{ base:'1.3rem', md: '1.6rem' }}>
                             { data.titles.subheading }
                         </Text>
                     </Heading>
