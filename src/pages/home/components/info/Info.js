@@ -55,6 +55,7 @@ export const Info = () => {
                         { data.titles.heading }
                         <Text 
                             as={ 'span' }
+                            display={ 'block' }
                             fontSize={{ base:'1.3rem', md: '1.6rem' }}>
                             { data.titles.subheading }
                         </Text>
