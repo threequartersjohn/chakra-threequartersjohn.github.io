@@ -45,7 +45,7 @@ export const Info = () => {
             paddingBottom={{ base: '1rem', md: 0 }}
             as={ 'section' }
             height={ '20rem' }
-            width={{ base: '16rem', md: '24rem' }}>
+            width={{ base: '16rem', md: '24.1rem' }}>
                 <Box
                     as={ 'header' }>
                     <Heading 
