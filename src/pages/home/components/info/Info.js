@@ -1,5 +1,6 @@
 import { Box, Link, HStack, Flex } from '@chakra-ui/layout'
 import { Heading, Text } from '@chakra-ui/react';
+import { Fragment } from 'react';
 
 const data = {
     titles: {
@@ -10,8 +11,17 @@ const data = {
     jobs: {
         current: {
             intro: 'Currently at ',
-            name: 'MOXY',
-            url: 'https://moxy.studio',
+            name: 'Uphold',
+            url: 'https://uphold.com/',
+        },
+        previous: {
+            intro: ', previously at ',
+            previousJobs: [
+                {
+                    name: 'MOXY',
+                    url: 'https://moxy.studio',
+                }
+            ]
         }
     },
     links: [
@@ -75,15 +85,25 @@ export const Info = () => {
                             target={ '_blank' }
                             href={ data.jobs.current.url }>
                             { data.jobs.current.name }
-                            { '.' }
                         </Link>
+                        { data.jobs.previous.intro }
+                        { data.jobs.previous.previousJobs.map((job, index, arr) => (
+                            <Link
+                                key={ job.name }
+                                referrerPolicy={ 'no-referrer' }
+                                target={ '_blank' }
+                                href={ job.url }>
+                                { job.name }
+                                { arr.length - 1 === index ? '.' : ', '}
+                            </Link>
+                        )) }
                     </Text>
                 </Box>
                 <HStack
                     marginTop={  'auto' }
                     as={ 'footer' }>
                         { data.links.map(({name, url}, index) => (
-                            <>
+                            <Fragment key={ name }>
                                 <Link
                                     referrerPolicy={ 'no-referrer' }
                                     target={ '_blank' }
@@ -95,7 +115,7 @@ export const Info = () => {
                                     <Text as={ 'span' }>
                                         {' / '}
                                     </Text>}
-                            </>
+                            </Fragment>
                         )) }
                 </HStack>
 
