@@ -61,7 +61,7 @@ export const Info = () => {
                     <Heading 
                         as={ 'h1' }
                         lineHeight={ '1' }
-                        fontSize={{ base:'1.49rem', md: '2rem' }}>
+                        fontSize={{ base:'1.49rem', md: '1.8rem' }}>
                         { data.titles.heading }
                         <Text 
                             as={ 'span' }

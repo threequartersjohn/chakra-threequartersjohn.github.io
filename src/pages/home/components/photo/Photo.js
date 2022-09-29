@@ -3,7 +3,7 @@ import { Image } from '@chakra-ui/image';
 
 const image = {
     alt: 'Photo of me.',
-    src: 'images/selfie.jpg',
+    src: 'images/selfie.png',
 };
 
 export const Photo = () => {
